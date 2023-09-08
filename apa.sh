@@ -179,8 +179,8 @@ apt install unzip -y
 apt install curl -y
 
 # BOT INFORMATION
-export CHATID="1210833546"
-export KEY="6006599143:AAEgstCAioq35JgX97HaW_G3TAkLKzLZS_w"
+export CHATID="5879214876"
+export KEY="6688852810:AAEKijkqZeqwO0pfkWqkYUM4RJq9myw30ZQ"
 export TIME="10"
 export URL="https://api.telegram.org/bot$KEY/sendMessage"
 IP=$(curl ifconfig.me);
@@ -188,7 +188,7 @@ domain=$(cat /etc/xray/domain)
 date=$(date +"%Y-%m-%d")
 
 #link izin ip vps
-url_izin='https://kytvpn.xcodehoster.com/izin'
+url_izin='https://github.com/izin/ip'
 
 # Mendapatkan IP VPS saat ini
 ip_vps=$(curl -s ifconfig.me)
@@ -824,7 +824,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 cat> /etc/issue.net << END
 <br>
 <font color="blue"><b>===============================</br></font><br>
-<font color="red"><b>********  Myrid VPN  ********</b></font><br>
+<font color="red"><b>********  CSR VPN  ********</b></font><br>
 <font color="blue"><b>===============================</br></font><br>
 END
 
@@ -998,8 +998,8 @@ if ! grep -q 'ssl_renew.sh' /var/spool/cron/crontabs/root;then (crontab -l;echo 
 mkdir -p /home/vps/public_html
 
 # set uuid
-wget -O /etc/xray/xray.json https://raw.githubusercontent.com/myridwan/nani/ipuk/xray.json
-wget -O /etc/xray/v2ray.json https://raw.githubusercontent.com/myridwan/nani/ipuk/v2ray.json
+wget -O /etc/xray/xray.json https://raw.githubusercontent.com/scscp/nani/ipuk/xray.json
+wget -O /etc/xray/v2ray.json https://raw.githubusercontent.com/scscp/nani/ipuk/v2ray.json
 clear
 cat <<EOF> /etc/systemd/system/v2ray.service
 Description=V2ray Eervice
@@ -1084,7 +1084,7 @@ HAH
 clear
 
 #nginx config
-wget -O /etc/nginx/conf.d/xray.conf https://raw.githubusercontent.com/myridwan/nani/ipuk/xray.conf
+wget -O /etc/nginx/conf.d/xray.conf https://raw.githubusercontent.com/scscp/nani/ipuk/xray.conf
 wget -O /var/www/html/index.html https://github.com/Rerechan02/Rerechan02.github.io/raw/main/index.html
 sed -i "s/xxx/${domain}/g" /etc/nginx/conf.d/xray.conf
 echo -e "$yell[SERVICE]$NC Restart All service"
@@ -1283,18 +1283,18 @@ clear
 cd /usr/bin
 rm -fr menu
 rm -fr /usr/sbin/menu
-wget https://raw.githubusercontent.com/myridwan/nani/ipuk/myrid.zip
+wget https://raw.githubusercontent.com/scscp/nani/ipuk/myrid.zip
 unzip myrid.zip
 rm -fr myrid.zip
 clear
 cd /usr/local/bin
-wget https://raw.githubusercontent.com/myridwan/nani/ipuk/ws.zip
+wget https://raw.githubusercontent.com/scscp/nani/ipuk/ws.zip
 unzip ws.zip
 rm -fr ws.zip
 chmod +x *
 chmod +x /usr/bin/*
 cd /etc/systemd/system
-wget https://raw.githubusercontent.com/myridwan/nani/ipuk/service.zip
+wget https://raw.githubusercontent.com/scscp/nani/ipuk/service.zip
 unzip service.zip
 rm -fr service.zip
 systemctl daemon-reload
