@@ -188,7 +188,7 @@ domain=$(cat /etc/xray/domain)
 date=$(date +"%Y-%m-%d")
 
 #link izin ip vps
-url_izin='https://github.com/izin/ip'
+url_izin='https://github.com/scscp/izin/main/ip'
 
 # Mendapatkan IP VPS saat ini
 ip_vps=$(curl -s ifconfig.me)
